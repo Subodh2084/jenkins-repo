@@ -15,10 +15,9 @@ pipeline {
                   echo "Building Node App"
                   npm run build
                 '''
-            }
-    }
-
-    stage('Run Test') {
+            }}
+            
+     stage('Run Test') {
         agent {
             docker {
                 image 'node:18-alpine'
@@ -42,6 +41,7 @@ pipeline {
         }
 
     }
+    
 
 }
 
